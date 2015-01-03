@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Jobeet - Job Platform{% endblock %}</title>
+        {% block stylesheets %}
+        <link href="{{ asset('bundles/app/css/bootstrap.min.css') }}" rel="stylesheet" media="screen">
+        {% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+    	<div class="container">
+			<div class="page-header">
+		    	<h1>Jobeet <small>A simple job platform</small></h1>
+		    </div>
+			<div class="row">
+	    		<ul class="nav nav-tabs">
+	    			<li><a href="{{ path('homepage') }}">All Jobs</a></li>
+	    			<li><a href="{{ path('newJob') }}">Post a Job</a></li>
+	    		</ul>
+				<div class="span8">
+		        	{% block body %}{% endblock %}
+		        </div>
+		    </div>
+        </div>
+        {% block javascripts %}
+         <script src="{{ asset('bundles/app/js/bootstrap.min.js') }}"></script>
+        {% endblock %}
+    </body>
+</html>

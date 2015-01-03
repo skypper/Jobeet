@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<table class="table">
+		<tr>
+			<th>Id</th>
+			<th>Location</th>
+			<th>Position</th>
+			<th>Company</th>
+			<th></th>
+		</tr>
+    {% for job in jobs %}
+    	<tr>
+    		<td>{{ job.id }}</td>
+    		<td>{{ job.location }}</td>
+    		<td>{{ job.position }}</td>
+    		<td>{{ job.company }}</td>
+    		<td>
+    			<a href="{{ path('showJob', {'id': job.id}) }}" class="icon-plus"></a>
+    			<a href="{{ path('editJob', {'id': job.id}) }}" class="icon-edit"></a>
+    			<a href="{{ path('removeJob', {'id': job.id}) }}" class="icon-remove"></a>
+    		</td>
+    	</tr>
+    {% endfor %}
+    </table>
+{% endblock %}

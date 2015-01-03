@@ -1,0 +1,8 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<h1>{{ job.company }}</h1>
+	<div class="lead">{{ job.location }} - {{ job.position }}</div>
+	<p>{{ job.description }}</p>	
+	<i>How to apply</i>
+{% endblock %}
