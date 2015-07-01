@@ -2,9 +2,9 @@
 
 Installation:
 ========================
-1. Run the following command
+1. Edit database information in app/config/parameters.yml;
+2. Run the following command
+        php app/console doctrine:schema:create
+.
 
-    php app/console doctrine:schema:create
-
-2. Edit database information in app/config/parameters.yml
 
