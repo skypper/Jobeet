@@ -2,4 +2,4 @@ _assetic:
     resource: .
     type: assetic
 _app:
-    resource: /var/www/html/jobeet/app/config/routing_dev.yml
+    resource: 'C:/xampp/htdocs/Jobeet/app/config/routing_dev.yml'
